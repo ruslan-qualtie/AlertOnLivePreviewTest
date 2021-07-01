@@ -5,15 +5,14 @@ struct ContentView: View {
         Alerts(message: "App Alert")
     }
 }
+
 struct Alerts: View {
     var message: String
     var body: some View {
-        NavigationView {
-            Text("Where is the Alert?")
-                .alert(isPresented: .constant(true)) {
-                    Alert(title: Text("Hello"), message: Text(message))
-                }
-        }
+        Text("Where is the Alert?")
+            .alert(isPresented: .constant(true)) {
+                Alert(title: Text("Hello"), message: Text(message))
+            }
     }
 }
 
